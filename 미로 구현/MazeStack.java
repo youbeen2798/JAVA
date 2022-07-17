@@ -103,9 +103,10 @@ public class MazeStack {
     public static void main(String[] args){
 
         Scanner scanner = new Scanner(System.in);
+        System.out.print("행의 크기를 입력하시오: ");
         int n = scanner.nextInt();
+        System.out.print("열의 크기를 입력하시오: ");
         int m = scanner.nextInt();
-
         //만약 배열 값을 직접 지정해준다면, 올바른 결과값이 나오지만
         // n행 m열의 배열에 무작위로 0과 1을 넣었을 때
         //(0,0)에서 (n,m)까지 도달할 수 있는 미로가 배정되지 않을 확률이 많음
