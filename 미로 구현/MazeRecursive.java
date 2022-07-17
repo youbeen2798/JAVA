@@ -1,3 +1,11 @@
+//프로그램 설명
+//행의 크기(n)와 열의 크기(m)를 차례대로 입력받아
+//해당 크기의 배열(n*m)에 랜덤으로 0과 1를 배정한다
+//1은 이동할 수 있는 칸, 0은 이동할 수 없는 칸으로 설정하여
+//(0,0)에서 (n-1,m-1)으로 이동할 수 있는 미로를 찾아 해당 경로를 이루는 칸들은 2로 바꾸어 출력한다.
+//배열이 (0,0)에서 (n-1,m-1)으로 이동할 수 없다면, (n-1,m-1)로 갈 수 있는 미로 값이 없습니다.라는 메시지를 출력한다.
+//해당 프로그램은 stack을 이용하였음
+
 import java.util.*;
 
 public class MazeRecursive {
@@ -24,12 +32,9 @@ public class MazeRecursive {
             int nx = x + dx[i];
             int ny = y + dy[i];
 
-//            System.out.println("x: " + nx + "y: " + ny);
-
             if(0<= nx && nx < n && 0 <= ny && ny < m){
                 if(visited[nx][ny] == false && map[nx][ny] == 1){
                     visited[nx][ny] = true;
-//                  System.out.println("nx: " + nx + "ny: " + ny);
                     truemap[nx][ny] = 2;
 
                     if(nx == n-1 && ny == m-1){
@@ -52,7 +57,8 @@ public class MazeRecursive {
                 }
             }
         }
-        if(cnt==4){
+
+        if(cnt==4){ //만약 1의 값을 가졌지만, (2,2)로 도달하는데 쓰이지 않는 경로라면
             truemap[x][y] = map[x][y];
         }
         
