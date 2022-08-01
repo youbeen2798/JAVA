@@ -3,7 +3,7 @@ public abstract class Beverage extends Test {
     private int price;
     private String name;
 
-    public Beverage(String name, int num, int price){
+    public Beverage(String name, int price){
         this.name = name;
         this.price = price;
     }
@@ -21,7 +21,7 @@ public abstract class Beverage extends Test {
     }
 
     public void pay(PaymentMethod paymentMethod, int totalprice, int instanceNumber){ //음료 결제하는 메소드
-		    paymentMethod.pay(totalprice, instanceNumber);
-	  }
+		paymentMethod.pay(totalprice, instanceNumber);
+	}
 
 }
