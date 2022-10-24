@@ -17,4 +17,4 @@
 
 
 <h1> 논리 설계</h1>
-![image](https://user-images.githubusercontent.com/62228401/197425590-8bf1adcd-7112-46ea-82e0-85e418d0c784.png)
+![image](https://user-images.githubusercontent.com/62228401/197425677-ee86d4b3-9668-41c5-8952-6e8e4233da7e.png)
