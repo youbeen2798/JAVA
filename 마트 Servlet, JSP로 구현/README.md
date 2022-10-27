@@ -16,7 +16,15 @@
   - 현재 언어(ko or en) 표시
   - 잔고 (사용자에게 부여된 돈에서 사용하고 남은 금액) 표시
 
-- Servlet
-  - GET /init: 식품매대 준비
-    - context
+- 장바구니
+  - 장바구니 담기
+    - 상품 수량 부족 시 AmountException
+  
+  - 장바구니에 담긴 물건 선택해서 결제 : POST / pay
+    - 결재한 금액 표시
+    - 결재 후 잔액 표시
+    - 잔액 부족 시 NotEnoughMoneyException
+ 
+ - 모든 메세지는 영어, 한국어 2개 언어 지원
+    
   
