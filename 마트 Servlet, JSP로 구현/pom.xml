@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.example</groupId>
+  <artifactId>Market</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <properties>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>jakarta.servlet</groupId>
+      <artifactId>jakarta.servlet-api</artifactId>
+      <version>4.0.4</version> <!--api를 알아야 한다. servlet spec 알아야 개발을 한다. 배포할 때 필요없다-->
+      <scope>provided</scope> <!--배포할 때 tomcat이 가지고 있으니까, api만 참조하고 구현 클래스는 tomcat이 가지고 있다-->
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.24</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId> <!-- logback-clasic을 쓰면, 종합으로 모든 것을 쓸 수 있다-->
+      <artifactId>logback-classic</artifactId> <!-- logback을 사용하고 싶으면 logback-classic을 라이브러리 의존성에 추가한다-->
+      <version>1.2.11</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jsoup</groupId> <!--html을 beautify하게 만드는 기술-->
+      <artifactId>jsoup</artifactId>
+      <version>1.14.3</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/jstl/jstl -->
+    <dependency>
+      <groupId>jstl</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.jscience/jscience -->
+    <dependency>
+      <groupId>org.jscience</groupId>
+      <artifactId>jscience</artifactId>
+      <version>4.3.1</version>
+    </dependency>
+
+
+  </dependencies>
+
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.2.2</version>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
